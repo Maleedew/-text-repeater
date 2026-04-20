@@ -116,6 +116,68 @@
   border-top: 1px solid var(--border-color);
 }
 
+.dev-contact {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.dev-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.dev-names {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.dev-names strong {
+  color: var(--accent-primary);
+}
+
+.dev-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.dev-link {
+  font-size: 11px;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  display: block;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.dev-link:hover {
+  color: var(--accent-primary);
+  background: var(--bg-hover);
+}
+
+.demo-link-sidebar {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--accent-primary);
+  font-weight: 600;
+  padding: 6px 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.demo-link-sidebar:hover {
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateY(-1px);
+}
+
 .user-info {
   display: flex;
   align-items: center;
@@ -172,7 +234,8 @@
   .logo-text,
   .nav-label,
   .nav-badge,
-  .user-details {
+  .user-details,
+  .dev-contact {
     display: none;
   }
 
@@ -184,5 +247,9 @@
   .user-info {
     justify-content: center;
     padding: 8px;
+  }
+
+  .sidebar-footer {
+    padding: 12px 8px;
   }
 }
