@@ -1,0 +1,205 @@
+.history {
+  padding: 32px;
+  min-height: 100vh;
+}
+
+.history-header {
+  margin-bottom: 32px;
+}
+
+.history-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.history-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.history-item:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-primary);
+  transform: translateX(8px);
+}
+
+.history-thumbnail {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.history-logo {
+  font-size: 40px;
+}
+
+.history-category {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.history-category.news {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+}
+
+.history-category.sports {
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+}
+
+.history-category.movies {
+  background: rgba(99, 102, 241, 0.9);
+  color: white;
+}
+
+.history-category.kids {
+  background: rgba(245, 158, 11, 0.9);
+  color: white;
+}
+
+.history-category.general,
+.history-category.entertainment {
+  background: rgba(139, 92, 246, 0.9);
+  color: white;
+}
+
+.history-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.history-meta span:nth-child(2) {
+  opacity: 0.5;
+}
+
+.history-action {
+  flex-shrink: 0;
+}
+
+.play-arrow {
+  font-size: 24px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.2s ease;
+}
+
+.history-item:hover .play-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.no-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.no-history-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  opacity: 0.5;
+}
+
+.no-history h3 {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.no-history p {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .history {
+    padding: 16px;
+    padding-top: 90px;
+  }
+
+  .history-title {
+    font-size: 28px;
+  }
+
+  .history-item {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .history-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .history-logo {
+    font-size: 32px;
+  }
+
+  .history-name {
+    font-size: 16px;
+  }
+
+  .play-arrow {
+    display: none;
+  }
+}
