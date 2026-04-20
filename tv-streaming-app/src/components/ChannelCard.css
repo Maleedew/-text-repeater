@@ -1,0 +1,172 @@
+.channel-card {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+}
+
+.channel-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.channel-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-hover));
+  overflow: hidden;
+}
+
+.channel-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.channel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.channel-card:hover .channel-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 48px;
+  filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.3));
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.channel-card:hover .play-icon {
+  transform: scale(1);
+}
+
+.category-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+}
+
+.category-badge.news {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+}
+
+.category-badge.sports {
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+}
+
+.category-badge.movies {
+  background: rgba(99, 102, 241, 0.9);
+  color: white;
+}
+
+.category-badge.kids {
+  background: rgba(245, 158, 11, 0.9);
+  color: white;
+}
+
+.category-badge.general,
+.category-badge.entertainment {
+  background: rgba(139, 92, 246, 0.9);
+  color: white;
+}
+
+.channel-info {
+  padding: 16px;
+}
+
+.channel-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-country {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.channel-category {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 70px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.channel-card:hover .favorite-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.favorite-btn:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.favorite-btn.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .favorite-btn {
+    opacity: 1;
+    transform: scale(1);
+    right: 12px;
+    top: auto;
+    bottom: 70px;
+  }
+}
